@@ -5,8 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
 </head>
+<style>
+    /* test */
+
+    /*  */
+body{
+    background-image: url(http://pic.qiantucdn.com/58pic/23/12/64/92G58PIC93T_1024.jpg!/fw/780/watermark/url/L3dhdGVybWFyay12MS4zLnBuZw==/align/center);
+}
+.block{
+    position: fixed;
+    border: 1px solid #ccc;
+    left: 30px;
+    z-index: 100;
+}
+
+.opacity0{
+    opacity: 0;
+}
+</style>
 <body>
+    <!-- 背景 -->
+    <div class="bg"></div>
     
+    <!-- page1 -->
+    <div class="block"
+        data-10="opacity:1;"
+        data-190="opacity:0;"
+        data-emit-events
+        >
+        <div
+            id="header">
+            <h1>hello skrollr</h1>
+        </div>
+        <div id="body">
+            <p>程式碼&說明</p>
+            <textarea cols="80" rows="13">
+                注意：data中有的css屬性在第一個有其他也要有(不管有沒有用到)
+                ex.
+                OK
+                data-840="opacity:0; transform:translate(0px,0px);"
+                data-1000="opacity:1; transform:translate(50px,0px);"
+
+                ERROR(少了opacity:0;、少了translate第2個值
+                data-840=" transform:translate(0px);"
+                data-1000="opacity:1; transform:translate(50px,0px);"
+            </textarea>
+        </div>
+    </div>
+    <!-- page2 -->
+    <div class="block"
+        data-300="opacity:0;"
+        data-600="opacity:1;"
+        data-800="opacity:0;"        
+        >
+        <h1>fade in out in </h1>
+        <textarea cols="80" rows="13">
+            data-300="opacity:0;"
+            data-600="opacity:1;"
+            data-800="opacity:0;"
+        </textarea>
+    </div>
+    <!-- page3 -->
+    <div 
+        class="block"
+        data-840="opacity:0; transform:translate(0px,0px);"
+        data-1000="opacity:1; transform:translate(50px,0px);"
+        data-1800="opacity:1; transform:translate(350px,210px);"
+        data-2400="opacity:1; transform:translate(0px,510px);"
+        data-2600="opacity:0; transform:translate(0px,510px);"
+    >
+        <h1>位置偏移</h1>
+        <textarea cols="80" rows="13">
+                data-840="opacity:0; transform:translate(0px,0px);"
+                data-1000="opacity:1; transform:translate(50px,0px);"
+                data-1800="opacity:1; transform:translate(350px,210px);"
+                data-2100="opacity:1; transform:translate(0px,510px);"
+        </textarea>
+    </div>
+    <!-- page4 -->
+    <div
+        class="block"
+        data-2600="opacity:0; transform:scale(1,1);"
+        data-2600="opacity:1; transform:scale(1,1);"
+        data-3000="opacity:1; transform:scale(2,2);"
+        data-3200="opacity:1; transform:scale(1,1);"
+        data-3400="opacity:0; transform:scale(1,1);"
+    >
+        <h1>縮放</h1>
+        <textarea cols="80" rows="13">
+                data-2600="opacity:0; transform:scale(1,1);"
+                data-2600="opacity:1; transform:scale(1,1);"
+                data-3000="opacity:1; transform:scale(2,2);"
+                data-3200="opacity:1; transform:scale(1,1);"
+                data-3400="opacity:0; transform:scale(1,1);"
+        </textarea>
+    </div>
+    <!-- page5 -->
+    <div class="block"
+        data-3500="opacity:0;"
+        data-4000="opacity:1;"
+    >
+        <h1>test</h1>
+        <div class="block"
+            data-3600="transform:scale(1,1);top:0px; left:1110px;"
+            data-3900="transform:scale(10,10);top:450px; left:150px;"
+        >
+            ^_^
+        </div>
+        <div class="block"
+            data-3700="transform:scale(1,1);bottom:-111px; left:1110px;"
+            data-3990="transform:scale(10,10);bottom:450px; left:515px;"
+        >
+            ^0^
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+    <script src="all.js"></script>
 </body>
 </html>
